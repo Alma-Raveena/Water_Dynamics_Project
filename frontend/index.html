@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Surface Water Dynamics</title>
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+     Surface Water Dynamics under Climate Variation
+    <button id="themeToggle" class="theme-toggle" title="Toggle theme">🌙</button>
+  </header>
+
+  <div class="layout">
+
+    <!-- LEFT -->
+    <aside class="sidebar">
+      <h3>Controls</h3>
+
+      <label>Location</label>
+      <select id="location">
+        <option>UpperLake</option>
+        <option>Kuttanad</option>
+        <option>Rayalaseema</option>
+      </select>
+
+      <label>From Year</label>
+      <select id="year1">
+        <option>2010</option>
+        <option>2015</option>
+        <option>2020</option>
+        <option>2022</option>
+        <option>2025</option>
+      </select>
+
+      <label>To Year</label>
+      <select id="year2">
+        <option>2010</option>
+        <option>2015</option>
+        <option>2020</option>
+        <option>2022</option>
+        <option>2025</option>
+      </select>
+
+      <button id="analyzeBtn">Analyze</button>
+
+      <div class="kpis">
+        <div id="kpi-location" class="kpi"> Location: -</div>
+        <div id="kpi-change" class="kpi"> Change: - km²</div>
+        <div id="kpi-percent" class="kpi"> % Change: -</div>
+      </div>
+    </aside>
+
+    <!-- RIGHT -->
+    <main class="main">
+      <div class="map-box">
+        <div id="map"></div>
+      </div>
+
+      <div class="bottom-row">
+        <div class="chart-box">
+          <canvas id="chart"></canvas>
+        </div>
+
+        <div class="climate-box">
+          <h4>Status & Climate Insight</h4>
+          <div id="status" class="status">Status: -</div>
+          <div class="severity">
+            <div id="severity-bar" class="severity-bar"></div>
+          </div>
+          <p id="insightText">Click Analyze to see insights.</p>
+          <p id="climateText" class="muted"></p>
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

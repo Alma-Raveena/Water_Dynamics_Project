@@ -1,0 +1,14 @@
+{
+  "Kuttanad": {
+    "center": [9.5, 76.5],
+    "zoom": 10
+  },
+  "UpperLake": {
+    "center": [23.25, 77.4],
+    "zoom": 11
+  },
+  "Rayalaseema": {
+    "center": [14.8, 77.6],
+    "zoom": 9
+  }
+}
