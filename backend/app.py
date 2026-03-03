@@ -7,7 +7,9 @@ import os
 app = Flask(__name__)
 CORS(app)
 
-CSV_PATH = "water_area.csv"  # since app.py is inside backend/
+CSV_PATH = "/home/AlmaRaveena28/backend/water_area.csv"
+
+  # since app.py is inside backend/
 
 # -----------------------------
 # Load data from CSV
