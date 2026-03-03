@@ -41,7 +41,7 @@ function analyze() {
   document.getElementById("insightText").innerText = "Analyzing data...";
   document.getElementById("climateText").innerText = "";
 
-  fetch(`http://127.0.0.1:5000/compare?location=${location}&year1=${y1}&year2=${y2}`)
+  fetch(`https://AlmaRaveena28.pythonanywhere.com/compare?location=${location}&year1=${y1}&year2=${y2}`)
     .then(res => res.json())
     .then(data => {
       if (data.error) {
